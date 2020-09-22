@@ -6,6 +6,7 @@ var results_2 = ["images/fruit.png","images/fruit.png"];
 
 shuffle(results);
 shuffle(initial_images);
+var status = setInterval(checkStatus,500);
 
 function download_brochure(){
     //downloadbrochure on loading index.html
@@ -30,7 +31,7 @@ function onProductClick(index, id){
     if(results[index]=="images/durga.png" && attempts<=2){//&& attempts<=2
         console.log("won")
         flag = 1;    
-        imageHolder.onload = setTimeout(checkResult,500);   
+       // imageHolder.onload = setTimeout(checkResult,500);   
     } else{
        // flag = 0;
     } 
@@ -40,6 +41,21 @@ function onProductClick(index, id){
 function checkResult(){
    if(flag ==1){
         alert("You have won 10% discount" )
+    }
+}
+
+function checkStatus(){
+    if(attempts<=2 && flag ==1){
+        alert("Congratulations! You win 10% discount!!\n Click OK to redeem it!")
+        flag = 0;
+        window.location.href="win.html";
+    } else if(attempts >=8){
+        alert("Click Ok to restart the game");
+        shuffle(results);
+        shuffle(initial_images);
+        init_load();
+        flag = 0;
+        attempts = 0;
     }
 }
 
