@@ -50,8 +50,23 @@ main{
     padding:0.5rem;
 }
 
-.main-content{
+.main-content {
     height: 50vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main {
+    height: 50vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.winning-text{
+    height: 50vh;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .landing-image{
@@ -137,11 +152,7 @@ main{
     width:80%
 }
 
-.winning-text{
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-}
+
 
 /* 
 .filter{
@@ -209,9 +220,24 @@ main{
     -30px 0 40px rgba(0,0,0,0.1);
         height: 100vh;
     }
-    .main-content{
-        height: 60vh;
+
+    .main-content {
+        height: 50vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
    
+    .main {
+        height: 50vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .winning-text{
+        height: 50vh;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    }
     
 }
